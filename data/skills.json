@@ -6,8 +6,15 @@
     "tier": 1,
     "layer": "SIGNAL",
     "district": "CHAOS RANK",
-    "tags": ["UGC", "AEO", "Citation"],
-    "chains_to": ["evidence-graph", "schema-builder"],
+    "tags": [
+      "UGC",
+      "AEO",
+      "Citation"
+    ],
+    "chains_to": [
+      "evidence-graph",
+      "schema-builder"
+    ],
     "chains_from": []
   },
   {
@@ -17,9 +24,18 @@
     "tier": 2,
     "layer": "PROOF",
     "district": "CHAOS RANK",
-    "tags": ["Graph", "LLM", "Claims"],
-    "chains_to": ["agent-citation-page"],
-    "chains_from": ["ugc-harvester", "x-algorithm-observatory"]
+    "tags": [
+      "Graph",
+      "LLM",
+      "Claims"
+    ],
+    "chains_to": [
+      "agent-citation-page"
+    ],
+    "chains_from": [
+      "ugc-harvester",
+      "x-algorithm-observatory"
+    ]
   },
   {
     "id": "geo-audit",
@@ -28,8 +44,15 @@
     "tier": 2,
     "layer": "AUDIT",
     "district": "CHAOS RANK",
-    "tags": ["GEO", "LLM", "Audit"],
-    "chains_to": ["schema-builder", "prompt-rank-tracker"],
+    "tags": [
+      "GEO",
+      "LLM",
+      "Audit"
+    ],
+    "chains_to": [
+      "schema-builder",
+      "prompt-rank-tracker"
+    ],
     "chains_from": []
   },
   {
@@ -39,9 +62,18 @@
     "tier": 1,
     "layer": "STRUCTURE",
     "district": "CHAOS RANK",
-    "tags": ["Schema", "JSON-LD", "SEO"],
-    "chains_to": ["agent-citation-page"],
-    "chains_from": ["ugc-harvester", "geo-audit"]
+    "tags": [
+      "Schema",
+      "JSON-LD",
+      "SEO"
+    ],
+    "chains_to": [
+      "agent-citation-page"
+    ],
+    "chains_from": [
+      "ugc-harvester",
+      "geo-audit"
+    ]
   },
   {
     "id": "prompt-rank-tracker",
@@ -50,9 +82,15 @@
     "tier": 3,
     "layer": "INTEL",
     "district": "CHAOS RANK",
-    "tags": ["Prompts", "Tracking", "AI Rank"],
+    "tags": [
+      "Prompts",
+      "Tracking",
+      "AI Rank"
+    ],
     "chains_to": [],
-    "chains_from": ["geo-audit"]
+    "chains_from": [
+      "geo-audit"
+    ]
   },
   {
     "id": "agent-citation-page",
@@ -61,9 +99,16 @@
     "tier": 3,
     "layer": "PUBLISH",
     "district": "CHAOS RANK",
-    "tags": ["Entity", "Citation", "LLM"],
+    "tags": [
+      "Entity",
+      "Citation",
+      "LLM"
+    ],
     "chains_to": [],
-    "chains_from": ["evidence-graph", "schema-builder"]
+    "chains_from": [
+      "evidence-graph",
+      "schema-builder"
+    ]
   },
   {
     "id": "x-algorithm-observatory",
@@ -72,8 +117,40 @@
     "tier": 3,
     "layer": "INTEL",
     "district": "CHAOS RANK",
-    "tags": ["X", "Ranking", "Visibility", "OSINT", "Recommender Systems"],
-    "chains_to": ["evidence-graph"],
-    "chains_from": ["ugc-harvester"]
+    "tags": [
+      "X",
+      "Ranking",
+      "Visibility",
+      "OSINT",
+      "Recommender Systems"
+    ],
+    "chains_to": [
+      "evidence-graph"
+    ],
+    "chains_from": [
+      "ugc-harvester"
+    ]
+  },
+  {
+    "id": "agent-backlink-graph",
+    "name": "AGENT BACKLINK GRAPH",
+    "description": "Connects agents, project IP, canon, creators, assets, campaigns, distribution surfaces, evidence, conversions, and receipts as machine-readable relationship proof.",
+    "tier": 3,
+    "layer": "PROOF",
+    "district": "CHAOS RANK",
+    "tags": [
+      "Graph",
+      "Provenance",
+      "Distribution",
+      "Attribution",
+      "Citation"
+    ],
+    "chains_to": [
+      "agent-citation-page"
+    ],
+    "chains_from": [
+      "evidence-graph",
+      "schema-builder"
+    ]
   }
 ]
